@@ -1,0 +1,223 @@
+.page   { max-width: 960px; animation: fadeUp 0.4s ease; }
+.loader { height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.name { color: var(--accent2); }
+
+.sub  { font-size: 14px; color: var(--text2); }
+
+.date {
+  font-size: 13px;
+  color: var(--text3);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  white-space: nowrap;
+  font-family: var(--font-display);
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform var(--transition), border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard:hover { transform: translateY(-2px); }
+
+.statIcon {
+  font-size: 20px;
+  margin-bottom: 4px;
+  opacity: 0.6;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--text2);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardTodo     { border-top: 2px solid var(--border2); }
+.cardProgress { border-top: 2px solid var(--amber);   }
+.cardDone     { border-top: 2px solid var(--green);   }
+.cardOverdue  { border-top: 2px solid var(--red);     }
+
+/* Main Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.seeAll {
+  font-size: 12px;
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 500;
+}
+.seeAll:hover { text-decoration: underline; }
+
+/* Empty */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 16px;
+  gap: 8px;
+  color: var(--text3);
+  font-size: 13px;
+  text-align: center;
+}
+
+.emptyIcon { font-size: 28px; opacity: 0.4; }
+
+.link { color: var(--accent2); text-decoration: none; }
+.link:hover { text-decoration: underline; }
+
+/* Overdue list */
+.overdueList { display: flex; flex-direction: column; gap: 8px; }
+
+.overdueItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--red-bg);
+  border: 1px solid rgba(239,68,68,0.15);
+  border-radius: var(--radius-sm);
+}
+
+.overdueInfo { flex: 1; min-width: 0; }
+
+.overdueTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.overdueMeta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+/* Project list */
+.projectList { display: flex; flex-direction: column; gap: 6px; }
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.projectItem:hover { border-color: var(--border2); transform: translateX(2px); }
+
+.projectIcon {
+  width: 32px; height: 32px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(124,106,255,0.25);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 14px;
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+.projectInfo { flex: 1; min-width: 0; }
+
+.projectName {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.projectMeta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+.chevron { font-size: 18px; color: var(--text3); }
+
+@media (max-width: 768px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .grid      { grid-template-columns: 1fr; }
+  .heading   { font-size: 22px; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

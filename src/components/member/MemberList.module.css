@@ -1,0 +1,54 @@
+.list { display: flex; flex-direction: column; gap: 8px; }
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition);
+}
+
+.item:hover { border-color: var(--border2); }
+
+.avatar {
+  width: 32px; height: 32px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(124,106,255,0.3);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 13px;
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+.info { flex: 1; min-width: 0; }
+
+.name {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.email {
+  display: block;
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.removeBtn {
+  width: 26px; height: 26px;
+  background: transparent; border: 1px solid var(--border);
+  border-radius: 6px; color: var(--text3);
+  cursor: pointer; font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.removeBtn:hover { background: var(--red-bg); border-color: var(--red); color: var(--red); }
