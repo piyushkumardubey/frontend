@@ -57,7 +57,7 @@ export default function Signup() {
               className={styles.input}
               value={form.name}
               onChange={set("name")}
-              placeholder="John Doe"
+              placeholder="Name"
               required
               autoFocus
             />
@@ -70,7 +70,7 @@ export default function Signup() {
               type="email"
               value={form.email}
               onChange={set("email")}
-              placeholder="you@company.com"
+              placeholder="you@gmail.com"
               required
             />
           </div>
