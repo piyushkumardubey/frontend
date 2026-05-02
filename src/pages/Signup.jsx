@@ -57,7 +57,7 @@ export default function Signup() {
               className={styles.input}
               value={form.name}
               onChange={set("name")}
-              placeholder="Name"
+              placeholder="Your Name"
               required
               autoFocus
             />
